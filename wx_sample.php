@@ -3,8 +3,8 @@
   * wechat php test
   */
 // include implement class file
-include_once "Auhentication.php";
-include_once "DistributeMessage.php";
+include_once "./Authentication.php";
+include_once "./DistributeMessage.php";
 //define your token
 define("TOKEN", "wechat");
 if(isset($_GET['echostr'])){
@@ -12,7 +12,7 @@ if(isset($_GET['echostr'])){
     $authen->valid();
 }else{
 
-    $distribut_msg = new DistributeMessage();
+    $distribute_msg = new DistributeMessage();
     $distribute_msg->responseMsg();
 }
 
